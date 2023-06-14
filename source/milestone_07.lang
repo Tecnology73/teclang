@@ -1,0 +1,61 @@
+func main() int {
+    string a;
+    printf("Null: %s\n", a); # NullException
+
+    string b();
+    printf("Empty: %s\n", b); # Empty string
+
+    string c("test");
+    printf("Initial value: %s\n", c);
+
+    string d;
+    d = "testing";
+    printf("Assignment: %s\n", d);
+
+    string e();
+    e = "again";
+    printf("Another assign: %s\n", e);
+
+    string f("initial");
+    f = "newValue";
+    printf("Override: %s\n", f);
+
+    string small("what if this is a really really really long string");
+    small = "short";
+    printf("Short override: %s\n", small);
+
+    string large("something larger");
+    printf("Large Initial: %s\n", large);
+
+    string tmp("test");
+    printf("Char Test: %s\n", tmp);
+    printf("0: %c\n", tmp[0]);
+    printf("1: %c\n", tmp[1]);
+    printf("2: %c\n", tmp[2]);
+    printf("3: %c\n", tmp[3]);
+    printf("-1: %c\n", tmp[-1]);
+    printf("-2: %c\n", tmp[-2]);
+    printf("-3: %c\n", tmp[-3]);
+    printf("-4: %c\n", tmp[-4]);
+
+
+    return 0;
+}
+
+#func main() int {
+#    int[] nums(10);
+#    nums[0] = 420;
+#    nums[1] = 421;
+#    nums[2] = 422;
+#    nums[3] = 423;
+#    nums[4] = 424;
+#    nums[5] = 96;
+#    nums[6] = 426;
+#    nums[7] = 427;
+#    nums[8] = 428;
+#    nums[9] = 69;
+#
+#    printf("%d\n", nums[-2]);
+#
+#    return 0;
+#}

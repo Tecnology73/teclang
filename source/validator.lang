@@ -1,0 +1,148 @@
+func print(int num) {
+    printf("Your lucky number is %d!\n", num);
+}
+
+func main() int {
+    int a(0);
+
+    a += 1;
+
+    print(a);
+
+    return 0;
+}
+
+#func main() int {
+#    int a(1);
+#
+#    a = 2;
+#    a += 1;
+#    a -= 3;
+#
+#    printf("%d\n", a);
+#
+#    return 0;
+#}
+
+func boolCheck() bool {
+    bool a(true);
+    bool b(true);
+
+    return a == b;
+
+    bool c(false);
+    bool d(false);
+
+    return c == d;
+
+    bool e(false);
+    bool f(true);
+
+    return e == f;
+
+    bool g(true);
+    bool h(false);
+
+    return f == h;
+}
+
+func intCheck() bool {
+    int a(0);
+    int b(0);
+
+    return a == b;
+
+    int c(1);
+    int d(1);
+
+    return c == d;
+
+    int e(0);
+    int f(1);
+
+    return e == f;
+
+    int g(13);
+    int h(-10);
+
+    return g == h;
+
+    int i(-1);
+    int j(+0);
+
+    return i == j;
+
+    int k(+1);
+    int l(+1);
+
+    return k == l;
+
+    int m(+1);
+    int n(-1);
+
+    return m == n;
+}
+
+func doubleTypes() bool {
+    double a(1.0);
+    double b(1.0);
+
+    return a == b;
+
+    double c(0.0);
+    double d(.0);
+
+    return c == d;
+
+    double e(-1.0);
+    double f(+1.0);
+
+    return e == f;
+
+    double g(.0);
+    double h(.1);
+
+    return g == h;
+}
+
+func differentTypes() bool {
+    int a(1);
+    bool b(true);
+
+    return a == b;
+
+    int c(0);
+    bool d(false);
+
+    return c == d;
+
+    int e(1);
+    bool f(false);
+
+    return e == f;
+
+    int g(2);
+    bool h(true);
+
+    return g == h;
+
+    int i(1);
+    double j(1.0);
+
+    return i == j;
+
+    double k(0.0);
+    bool l(false);
+
+    return k == l;
+
+    double m(-.0);
+    bool n(false);
+
+    return m == n;
+
+    bool o(false);
+    bool p(true);
+
+    return o == p;
+}

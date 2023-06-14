@@ -1,0 +1,30 @@
+#func print(string msg) {
+#func sum(int a, int b) int {
+#func sum(float a, float b) float {
+
+func sumNone() int {
+    return 1 - -2;
+}
+
+func sumOne(int a) int {
+    return a + 3;
+}
+
+func sumTwo(int a, int b) int {
+    return a + b;
+}
+
+func sumLocalVar(int a, int b) int {
+    int result(a + b);
+
+    return result;
+}
+
+func main() int {
+    printf("sumNone: %d\n", sumNone());
+    printf("sumOne: %d\n", sumOne(1));
+    printf("sumTwo: %d\n", sumTwo(1, -8));
+    printf("sumLocalVar: %d\n", sumLocalVar(1, 68));
+
+    return 0;
+}

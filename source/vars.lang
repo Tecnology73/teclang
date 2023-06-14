@@ -1,0 +1,11 @@
+int def;
+int set(10);
+
+double def;
+double set(10.0);
+
+string def;
+string set("Hello");
+
+bool def;
+bool set(true);

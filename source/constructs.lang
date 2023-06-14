@@ -1,0 +1,56 @@
+type Address {
+	string line0;
+	string line1;
+}
+
+type User {
+	string email;
+	Address address;
+}
+
+type Customer {
+	string firstName;
+	string lastName;
+	User user;
+}
+
+# Primitives have pre-defined constructors
+int num(10);
+string val("something");
+
+# Construct without constructor
+Customer customer{
+	lastName: "Doe",
+	user: User{
+		email: "john.doe@gmail.com",
+		address: Address {
+			line1: "42 Wallaby Way"
+		}
+	},
+	firstName: "John"
+};
+
+# Construct later
+Customer otherDude;
+
+if (true) {
+	otherDude = Customer {
+		firstName: "John",
+		lastName: "Doe"
+	};
+}
+
+# Define constructor
+func<Customer> construct(string fullName, User user) {
+	# self.firstName = fullName.split(' ')[0];
+	# self.lastName = fullName.substring(self.firstName.length + 1);
+	[self.firstName, self.lastName] = fullName.split(' ');
+
+	self.user = user;
+}
+
+# Use constructor
+Customer customer("John Doe", User { email: "john.doe@gmail.com" });
+
+# Clone (deep by default???)
+Customer betterCustomer = clone customer;

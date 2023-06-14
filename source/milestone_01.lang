@@ -1,0 +1,40 @@
+type Foo {
+    int a;
+    int b;
+}
+
+type Bar {
+    Foo foo;
+    int c;
+}
+
+func main() int {
+    int num;
+    num = 10;
+    printf("num: %d\n", num);
+
+    int[] numArr(2);
+    numArr[1] = 420;
+    printf("numArr[1]: %d\n", numArr[1]);
+
+    Foo foo();
+    foo.a += 2;
+    foo.a -= 2;
+    foo.a++;
+    foo.a--;
+    foo.a = 2;
+    foo.a *= 2;
+    foo.a = 8;
+    foo.a /= 2;
+    printf("foo.a: %d\n", foo.a);
+
+    Bar bar();
+    bar.foo.a = 69;
+    printf("bar.foo.a: %d\n", bar.foo.a);
+
+    Foo[] fooArr(2);
+    fooArr[1].b = 1;
+    printf("foo[1].b: %d\n", fooArr[1].b);
+
+    return 0;
+}

@@ -1,0 +1,55 @@
+func main() {
+    Customer customer;
+    customer.user.active = true;
+
+    Users[0].active = true;
+
+    return 0;
+}
+
+type User {
+    bool active;
+}
+
+type Customer {
+    User user;
+}
+
+#func main() int {
+##    num = 10 % 2;
+##    put((10 % 2) / 1);
+##    if (true) {}
+##    if (i /= 2 > 10 || true) {}
+##    if (put(true) && false || true) {}
+##    else if("something") {}
+##    for (int i in 0..10) {}
+##    for (int i in a..b) {}
+##    for (int i in 0..10; i += 2) {}
+##    for (int i in put()..10) {}
+##    for (int i in put()..put(); i += put()) {}
+##    put();
+##    if (put()) {}
+##
+##    num = 1 + 2 - 3;
+###    num = num1++ *= num2++;
+##
+##    num =  1 % 2 * 3 / 4 + 5 - 6;
+##    num += 1 % 2 * 3 / 4 + 5 - 6;
+##    num -= 1 % 2 * 3 / 4 + 5 - 6;
+##    num /= 1 % 2 * 3 / 4 + 5 - 6;
+##    num *= 1 % 2 * 3 / 4 + 5 - 6;
+##    num %= 1 % 2 * 3 / 4 + 5 - 6;
+##
+##    num = true || (false || 1) > 2;
+##    num /= num1 = num3++;
+##
+##    num *= num2 /= num3 = 4;
+##
+##    if (a != b || c == d || e) {}
+##    if (a++ && b++ && c++) {}
+#
+#    int num;
+#    int[] arr;
+#    arr[num++].something.new = 10;
+#    arr.val.num = 10;
+#}

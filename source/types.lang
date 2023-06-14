@@ -1,0 +1,17 @@
+type User {
+    int Age;
+    int BirthYear(1000);
+    bool IsAlive;
+}
+
+func main() int {
+    User user();
+    user.Age = 91;
+#    user.BirthYear = 1969;
+
+    printf("%d\n", user.Age); # Outputs 91
+    printf("%d\n", user.BirthYear); # Outputs 1000
+    printf("%d\n", user.IsAlive); # Outputs 0
+
+    return 0;
+}

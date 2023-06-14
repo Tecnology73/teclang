@@ -1,0 +1,28 @@
+type Foo {
+    int a(10);
+    int[] nums(10);
+}
+
+type Bar {
+    Foo foo;
+}
+
+func main() int {
+    int[] nums(10);
+    nums[0] = 1;
+    printf("nums[0]: %d\n", nums[0]);
+
+    Foo foo();
+    foo.nums[2] = 420;
+    printf("foo.nums[2]: %d\n", foo.nums[2]);
+
+    Foo[] foos(10);
+    foos[1].nums[2] = 420;
+    printf("foos[1].nums[2]: %d\n", foos[1].nums[2]);
+
+    Bar bar();
+    bar.foo.a = 42069;
+    printf("bar.foo.a: %d\n", bar.foo.a);
+
+    return 0;
+}

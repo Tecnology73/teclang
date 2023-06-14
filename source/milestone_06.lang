@@ -1,0 +1,16 @@
+type User {
+    bool IsLocked;
+}
+
+func<User> FreezeAccount(bool locked) {
+    self.IsLocked = locked;
+}
+
+func main() int {
+    User user();
+    user.FreezeAccount(true);
+
+    printf("Is Locked: %d\n", user.IsLocked);
+
+    return 0;
+}

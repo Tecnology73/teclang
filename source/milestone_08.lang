@@ -1,0 +1,57 @@
+func main() int {
+    int res(-100);
+
+    res = match (res) {
+        1 => 1,
+        2, 3, 4 => 2,
+        _ => res
+    };
+#
+#    int num = match(res) {
+#    int num = match (res) {
+#        1 => 1,
+#        2 => 3,
+#        3 => 5,
+#        4 => 7,
+#        20, 23, 48, 42 => 2,
+#        _ => 3
+#    };
+#
+#    int num = match (res) {
+#        1 => {
+#            return 1;
+#        },
+#        2 => {
+#            return 3;
+#        },
+#        3 => {
+#            return 5;
+#        },
+#        4 => {
+#            return 7;
+#        },
+#        20, 23, 48, 42 => {
+#            return 2;
+#        },
+#        _ => {
+#            return 3;
+#        }
+#    };
+
+# Complex bodies (such as those containing if/for statements) aren't supported
+# because I cannot capture the nested return statement and instead
+# assign the value to the variable
+#    int num = match res {
+#        0 => {
+#            if (true) {
+#                return 1;
+#            }
+#
+#            return 0;
+#        },
+#        1 => 2,
+#        _ => 3
+#    };
+#
+#    return num;
+}

@@ -1,0 +1,38 @@
+func main() int {
+    int[] nums(1000);
+
+    printf("--- Write ---\n");
+
+    # Set array values
+    for (int i in 0..nums.length) {
+        nums[i] = i * i;
+        printf("#%d: %d\n", i * i);
+    }
+
+    printf("\n--- Read ---\n");
+
+    # Output array values
+    for (int i in 0..nums.length) {
+        printf("#%d: %d\n", i, nums[i]);
+    }
+
+    printf("\n--- Free ---\n");
+
+    delete nums;
+
+    printf("Done\n");
+    printf("\n--- Read After Free ---\n");
+
+    printf("Before\n");
+    printf("#0: %d\n", nums[0]); # Illegal
+    printf("#0: %d\n", nums.length); # Illegal
+    printf("After\n");
+
+    # Output array values
+    # for (int i in 0..nums.length) { # Illegal operation
+    for (int i in 0..10) {
+        printf("#%d: %d\n", i);
+    }
+
+    return 0;
+}

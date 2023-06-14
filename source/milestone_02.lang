@@ -1,0 +1,54 @@
+type Foo {
+    int a(1);
+    int b;
+    int[] nums(10);
+}
+
+type Bar {
+    Foo foo;
+    int c;
+}
+
+func main() int {
+    # Case 1
+    int[] nums(10);
+    for (int i in 0..10) {
+        nums[i] = i * i;
+        printf("nums[%d]: %d\n", i, nums[i]);
+    }
+
+    # Case 2
+    int arraySize(10 + 10);
+    int[] varNums(arraySize);
+    for (int i in 1..arraySize) {
+        printf("#%d: %d\n", i, varNums[i]);
+    }
+
+    # Case 3
+    Foo foo();
+    foo.nums[4] = 20;
+    foo.a = 10;
+    printf("Number: %d\n", foo.a);
+    printf("Number: %d\n", foo.nums[4]);
+
+    # Case 4
+    Bar bar();
+    bar.c = 4;
+    bar.foo.nums[2] = 3;
+    bar.foo.a = 0;
+    printf("bar.c: %d\n", bar.c);
+    printf("bar.foo.nums[2]: %d\n", bar.foo.nums[2]);
+    printf("bar.foo.a: %d\n", bar.foo.a);
+
+    # Case 5
+    Foo[] foos(10);
+    printf("%d\n", foos[0].a);
+    for (int i in 0..10) {
+        foos[i].a = i * i;
+    }
+    for (int i in 0..10) {
+        printf("foo[%d].a: %d\n", i, foos[i].a);
+    }
+
+    return 0;
+}

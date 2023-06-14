@@ -1,0 +1,25 @@
+type Foo {
+    int a;
+    int b;
+    int[] c(25);
+}
+
+func main() int {
+    printf("--- int[] nums(42) ---\n");
+    int[] nums(42);
+    printf("nums.length: %d\n", nums.length);
+    printf("nums[0]: %d\n", nums[0]);
+
+    printf("--- Foo[] foos(10) ---\n");
+    Foo[] foos(10);
+    printf("foos[0].b: %d\n", foos[0].b);
+    printf("foos.length: %d\n", foos.length);
+
+    printf("--- Foo[] far(2) ---\n");
+    Foo[] far(2);
+    printf("far[0].c[4]: %d\n", far[0].c[4]);
+    printf("far.length: %d\n", far.length);
+    printf("far[0].c.length: %d\n", far[0].c.length);
+
+    return 0;
+}
